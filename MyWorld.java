@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.Actor;
 
 /**
  * Write a description of class MyWorld here.
@@ -8,9 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public static int score1 = 0;
+    public static int score2 = 0;
     /**
-     * Constructor for objects of class MyWorld.
+     * Spawns everything
      * 
      */
     public MyWorld()
@@ -20,18 +22,31 @@ public class MyWorld extends World
         Ball Ball = new Ball();
         addObject(Ball, getWidth()/2, getHeight()/2);
         
+        paddle paddle = new paddle("w", "s");
+        addObject(paddle,getWidth()/26, getHeight()/2);
+ 
+        paddle paddle1 = new paddle("up", "down");
+        addObject(paddle1, 577, 200);
         
-        Pong1 Pong1 = new Pong1();
-        addObject(Pong1, getWidth()/26, getHeight()/2);
+        addObject(new feature(), Greenfoot.getRandomNumber(getWidth()), 
+        Greenfoot.getRandomNumber(getHeight()));
         
-        Pong2 Pong2 = new Pong2();
-        addObject(Pong2, 577, getHeight()/2);
+        addObject(new feature(), Greenfoot.getRandomNumber(getWidth()), 
+        Greenfoot.getRandomNumber(getHeight()));
         
-        showText("PONG GAME" , 75, 25);
-        showText("By Alex Vance", 75, 45);
+        addObject(new feature(), Greenfoot.getRandomNumber(getWidth()), 
+        Greenfoot.getRandomNumber(getHeight()));
         
-        counter counter = new counter();
-        addObject(counter, getWidth()/2, 25);
+        addObject(new feature(), Greenfoot.getRandomNumber(getWidth()), 
+        Greenfoot.getRandomNumber(getHeight()));
         
+        addObject(new feature(), Greenfoot.getRandomNumber(getWidth()), 
+        Greenfoot.getRandomNumber(getHeight()));
+        
+        addObject(new feature(), Greenfoot.getRandomNumber(getWidth()), 
+        Greenfoot.getRandomNumber(getHeight()));
+        
+        showText("Player 1", 50, 25);
+        showText("Player 2",550, 375);
     }
 }

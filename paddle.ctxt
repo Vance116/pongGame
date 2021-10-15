@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=paddle
+comment0.text=\r\nMovent\ for\ both\ paddle\ (abstraction)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ figured\ out\ how\ to\ do\ abstraction,\ didnt\ realize\ that\ you\ could\ use\ the\ world\r\n
+comment2.params=
+comment2.target=void\ isKeyDown()
+comment3.params=upKey\ downKey
+comment3.target=paddle(java.lang.String,\ java.lang.String)
+numComments=4
